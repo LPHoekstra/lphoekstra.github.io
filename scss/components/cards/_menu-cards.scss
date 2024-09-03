@@ -1,0 +1,101 @@
+$time-animation: 250ms;
+$animation-delay: $time-animation;
+$next-animation: 0ms;
+
+@keyframes animated-cards {
+    0% {
+        transform: translateY(-71px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@for $i from 1 through 10 {
+    .animation-#{$i} {
+        animation: forwards animated-cards $time-animation;
+        animation-delay: $next-animation;
+    }
+
+    $next-animation: $next-animation + $animation-delay;
+}
+
+.menu-cards {
+    display: flex;
+    border-radius: 0.938rem;
+    background-color: $secondary-background-color;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-71px);
+
+    &__content-contenair {
+        padding: 0.813rem 0.938rem;
+        flex: 1;
+        overflow: hidden;
+        text-wrap: nowrap;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 1.125rem;
+        margin-bottom: 0.313rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__sub-and-amount-contenair {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        font-size: 0.938rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__amount {
+        font-weight: bold;
+        font-size: 0.938rem;
+        color: $amount-text-color;
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        transition: width 250ms ease-out;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        background-color: $tertiary-color;
+        background-image: url("./../../assets/images/logo/check.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top-right-radius: 0.938rem;
+        border-bottom-right-radius: 0.938rem;
+        transform: translateX(100%);
+        transform-origin: right;
+        width: 59px;
+        height: 100%;
+        transition: transform 250ms ease-out;
+    }
+
+    &:hover {
+        &::after {
+            width: 59px;
+        }
+
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

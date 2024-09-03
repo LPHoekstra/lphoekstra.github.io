@@ -1,0 +1,24 @@
+body {
+    font-family: $main-font-family;
+}
+
+h1 {
+    font-family: $secondary-font-family;
+    font-size: 1.875rem;
+    font-weight: 400;
+    color: $h1-color;
+
+    @include widescreen {
+        font-size: 2.375rem;
+    }
+}
+
+h2 {
+    font-family: $main-font-family;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a {
+    color: $main-text-color;
+}

@@ -1,74 +1,198 @@
 <!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Inter:wght@900&display=swap" rel="stylesheet">
-		<title>Riding Cities</title>
-	</head>
-	<body>
-		<div class="container">
-			<header>
-				<img src="images/header.png" alt="skateboard sur un sol goudronné">
-				<div class="headerTextContent">
-					<h1>RIDING CITIES</h1>
-				</div>
-			</header>
-			<main>
-				<section>
-					<h2>La mission de l'asso</h2>
-					<div class="directionRow">
-						<article>
-							<h3>Promouvoir</h3>
-							<p>L'asso regroupe des passionnés de glisse et plus particulièrement de skateboard qui œuvrent pour la promotion de ce sport au niveau régional.</p>
-						</article>
-						<article>
-							<h3>Transmettre</h3>
-							<p>Nous proposons des cours pour enfants, ados et adultes. Nous intervenons également dans les écoles pour faire découvrir le skate aux plus jeunes.</p>
-						</article>
-						<article>
-							<h3>Entraîner</h3>
-							<p>Nous accompagnons nos membres sur les compétitions en les préparant physiquement à donner le meilleur d'eux-mêmes.</p>
-						</article>
-						<article>
-							<h3>Fédérer</h3>
-							<p>L'asso organise tout au long de l'année des évènements autour du skate pour réunir toujours plus de monde autour de cette pratique.</p>
-						</article>
-					</div>
-				</section>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"
+            rel="stylesheet"
+        />
+        <title>OhMyFood</title>
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
 
-				<section class="sectionLinearGradientBackground whiteContentSection">
-					<h2>Les membres fondateurs</h2>
-					<div class="directionRow">
-						<article class="directionColumn">
-							<img src="./images/soraya.png" alt="Soraya">
-							<h3>Soraya</h3>
-							<p>Longboard</p>
-						</article>
-						<article class="directionColumn">
-							<img src="./images/marc.png" alt="Marc">
-							<h3>Marc</h3>
-							<p>Street</p>
-						</article>
-						<article class="directionColumn">
-							<img src="./images/pedro.png" alt="Pedro">
-							<h3>Pedro</h3>
-							<p>Pool</p>
-						</article>
-					</div>
-				</section>
+    <body>
+        <div class="loader">
+            <div class="loader__border">
+                <div class="loader__bar"></div>
+            </div>
+        </div>
 
-				<section class="sectionLightGreyBackground">
-					<h2>Découvrez nos cours !</h2>
-					<div class="directionColumn">
-						<a class="button buttonMainColor buttonRounded buttonHighlight" href="documents/planning-adultes.pdf">Télécharger le planning de cours pour adultes</a>
-						<a class="button buttonSecondColor buttonRounded buttonHighlight" href="documents/planning-enfants.pdf">Télécharger le planning de cours pour enfants</a>
-					</div>
-				</section>
-			</main>
-		</div>
-	</body>
+        <header class="header">
+            <h1>ohmyfood</h1>
+        </header>
+
+        <main>
+            <article class="location-article">
+                <img
+                    src="./assets/images/logo/maps-logo.svg"
+                    alt="logo de localisation"
+                />
+                <h2 class="location-article__content">Paris, Belleville</h2>
+            </article>
+
+            <section class="explore-section">
+                <h2 class="explore-section__title">
+                    Réservez le menu qui vous convient
+                </h2>
+                <p class="explore-section__subtitle">
+                    Découvrez des restaurants d'exception, sélectionnés par nos
+                    soins.
+                </p>
+                <a href="#restaurants" class="btn">
+                    Explorer nos restaurants
+                </a>
+            </section>
+
+            <section class="functioning-section">
+                <h2 class="functioning-section__title">Fonctionnement</h2>
+                <div class="functioning-contenair">
+                    <article class="functioning-cards">
+                        <span class="functioning-cards__number">1</span>
+                        <img
+                            src="./assets/images/logo/mobile-screen-button.svg"
+                            alt="mobile"
+                        />
+                        <h3 class="functioning-cards__title">
+                            Choisissez un restaurants
+                        </h3>
+                    </article>
+                    <article class="functioning-cards">
+                        <span class="functioning-cards__number">2</span>
+                        <img
+                            src="./assets/images/logo/list-ul.svg"
+                            alt="list"
+                        />
+                        <h3 class="functioning-cards__title">
+                            Composez votre menu
+                        </h3>
+                    </article>
+                    <article class="functioning-cards">
+                        <span class="functioning-cards__number">3</span>
+                        <img
+                            src="./assets/images/logo/store.svg"
+                            alt="magasin"
+                        />
+                        <h3 class="functioning-cards__title">
+                            Dégustez au restaurant
+                        </h3>
+                    </article>
+                </div>
+            </section>
+            <section id="restaurants" class="restaurants-section">
+                <h2 class="restaurants-section__title">Restaurants</h2>
+                <div class="restaurants-contenair">
+                    <article class="restaurants-cards">
+                        <a href="./restaurants/la-palette-du-gout.html">
+                            <img
+                                src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                alt="Un plat de la palette du goût qui est présenté"
+                                class="restaurants-cards__img"
+                            />
+                            <div class="restaurants-cards__new">Nouveau</div>
+                            <div class="restaurants-cards__content">
+                                <div>
+                                    <h3 class="restaurants-cards__title">
+                                        La palette du goût
+                                    </h3>
+                                    <p>Ménilmontant</p>
+                                </div>
+                                <div class="like"></div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="restaurants-cards">
+                        <a href="./restaurants/la-note-enchantee.html">
+                            <img
+                                src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                                alt=""
+                                class="restaurants-cards__img"
+                            />
+                            <div class="restaurants-cards__new">Nouveau</div>
+                            <div class="restaurants-cards__content">
+                                <div>
+                                    <h3 class="restaurants-cards__title">
+                                        La note enchantée
+                                    </h3>
+                                    <p>Charonne</p>
+                                </div>
+                                <div class="like"></div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="restaurants-cards">
+                        <a href="./restaurants/a-la-française.html">
+                            <img
+                                src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                alt=""
+                                class="restaurants-cards__img"
+                            />
+                            <div class="restaurants-cards__content">
+                                <div>
+                                    <h3 class="restaurants-cards__title">
+                                        À la française
+                                    </h3>
+                                    <p>Cité Rouge</p>
+                                </div>
+                                <div class="like"></div>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="restaurants-cards">
+                        <a href="./restaurants/le-delice-des-sens.html">
+                            <img
+                                src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                alt=""
+                                class="restaurants-cards__img"
+                            />
+                            <div class="restaurants-cards__content">
+                                <div>
+                                    <h3 class="restaurants-cards__title">
+                                        Le délice des sens
+                                    </h3>
+                                    <p>Folie-Méricourt</p>
+                                </div>
+                                <div class="like"></div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <h2 class="footer__title">ohmyfood</h2>
+            <div class="footer-content-contenair">
+                <div class="partnership-contenair">
+                    <div>
+                        <img src="./assets/images/logo/partner.svg" alt="" />
+                        <a href="#" class="partnership-contenair__link"
+                            >Proposer un restaurant</a
+                        >
+                    </div>
+                    <div>
+                        <img
+                            src="./assets/images/logo/suggest-restaurant.svg"
+                            alt=""
+                        />
+                        <a href="#" class="partnership-contenair__link"
+                            >Devenir partenaire</a
+                        >
+                    </div>
+                </div>
+                <div class="contact-contenair">
+                    <a href="#" class="contact-contenair__link"
+                        >Mentions légales</a
+                    >
+                    <a
+                        href="mailto:test@email.fr"
+                        class="contact-contenair__link"
+                        >Contact</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

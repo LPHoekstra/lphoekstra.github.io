@@ -1,0 +1,39 @@
+@keyframes heart {
+    0% {
+        transform: scale(0, 0);
+    }
+    60% {
+        transform: scale(1.4, 1.4);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.like {
+    height: 21px;
+    width: 23px;
+    background-image: url("./../../assets/images/logo/like.png");
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 22px;
+        width: 23px;
+        background-image: url("./../../assets/images/logo/union.png");
+        background-repeat: no-repeat;
+        transform: scale(0, 0);
+        transform-origin: center;
+    }
+
+    &:hover {
+        &::after {
+            animation: heart 200ms forwards;
+        }
+    }
+}

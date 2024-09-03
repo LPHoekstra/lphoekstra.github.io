@@ -1,0 +1,117 @@
+.location-article {
+    background-color: $location-background-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    z-index: 1;
+    position: relative; // relative position to activate z-index
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include widescreen {
+        box-shadow: none;
+    }
+
+    &__content {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+
+.explore-section {
+    padding: 2.5rem 1.25rem 3.5rem 1.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    @include widescreen {
+        padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+    }
+
+    &__title {
+        @media (max-width: 449px) {
+            max-width: 250px;
+            margin: auto;
+        }
+
+        @include widescreen {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.125rem;
+        font-weight: 300;
+        margin-top: 1rem;
+        margin-bottom: 1.75rem;
+
+        @include widescreen {
+            margin-top: 1.125rem;
+            margin-bottom: 1.125rem;
+        }
+    }
+}
+
+.functioning-section {
+    background-color: $secondary-background-color;
+    padding: 3rem 1.25rem 4.25rem 1.25rem;
+
+    @include widescreen {
+        padding: 3.125rem 1.25rem 3.125rem 1.25rem;
+    }
+
+    &__title {
+        max-width: 67.5rem;
+        margin: auto;
+    }
+}
+
+.functioning-contenair {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.625rem;
+
+    @include widescreen {
+        max-width: 67.5rem;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: row;
+    }
+}
+
+.restaurants-section {
+    padding: 3.375rem 1rem 4.125rem 1rem;
+    background-color: $main-background-color;
+
+    @include widescreen {
+        padding: 1.875rem 1rem 1.875rem 1rem;
+    }
+
+    &__title {
+        max-width: 67.5rem;
+        margin: auto;
+    }
+}
+
+.restaurants-contenair {
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+    margin-top: 1.25rem;
+
+    @include widescreen {
+        max-width: 67.5rem;
+        margin: 1.75rem auto 0 auto;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        gap: 50px;
+    }
+
+    @media (min-width: 1120px) {
+        gap: 50px 100px;
+    }
+}
