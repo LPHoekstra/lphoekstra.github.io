@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.header--img {
+    width: 3.813em;
+    height: 1.188em;
+    margin: 1.875em 0 1.875em 0;
+}
+
+.navbar {
+    padding-top: 1em;
+}
+
+.navbar--link {
+    margin-left: 4.25em;
+    padding-top: 0.875em;
+}
+
+.navbar--link__active {
+    border-top: solid 2px var(--main-color);
+    color: var(--main-color);
+    border-color: var(--main-color);
+}

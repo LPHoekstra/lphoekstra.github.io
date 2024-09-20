@@ -1,0 +1,96 @@
+.find-section {
+    margin-top: 1.875em;
+    margin-bottom: 2.188em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.188em;
+}
+
+.find-section--title {
+    margin-bottom: 0.5em;
+}
+
+.find-section--para {
+    font-size: 1em;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form--maps {
+    background-color: var(--main-bg-color);
+    padding: 0 1.125em 0 1.125em;
+    border-radius: 0.938em 0 0 0.938em;
+}
+
+.search-form--input {
+    border: 1px solid var(--main-bg-color);
+    text-align: left;
+    font-size: 1.125em;
+    font-weight: bold;
+    padding-left: 1.5em;
+    width: 12.188em;
+}
+
+.search-form--input:focus {
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.search-form--btn {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.125em;
+    background-color: var(--main-color);
+    border-radius: 0 0.938em 0.938em 0;
+    padding: 0.875em 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.filter,
+.filter--btn-container {
+    display: flex;
+    gap: 0.938em;
+    align-items: center;
+    font-size: 1.063em;
+}
+
+.filter--img {
+    height: 1.375em;
+    width: 1.375em;
+}
+
+.filter--btn {
+    border-radius: 1.563em;
+    background-color: #fff;
+    border: 2px solid var(--main-bg-color);
+    font-weight: 700;
+    font-size: 1em;
+    padding: 0.875em 1.188em;
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    transition: background-color 200ms;
+    cursor: pointer;
+}
+
+.filter--btn:hover {
+    background-color: var(--filter-bg-color);
+    transition: background-color 200ms;
+}
+
+.info-div {
+    display: flex;
+    gap: 0.625em;
+    align-items: center;
+}
+
+.info-div--info-icon {
+    border: solid #D9D9D9 1px;
+    padding: 0.438em 0.625em;
+    border-radius: 50%;
+    height: 0.625em;
+    width: 0.25em;
+}

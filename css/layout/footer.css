@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--main-bg-color);
+    display: flex;
+    padding: 1.25em;
+}
+
+.footer--info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.938em;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.footer--title {
+    font-size: 1.125em;
+}
+
+.footer--info a:hover {
+    text-decoration: solid underline 1px;
+}
