@@ -19,12 +19,7 @@
     cursor: pointer;
 
     &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 22px;
-        width: 23px;
+        @include pseudo-elements-absolute-full-size($width: 23px, $height: 21px);
         background-image: url("./../../assets/images/logo/union.png");
         background-repeat: no-repeat;
         transform: scale(0, 0);

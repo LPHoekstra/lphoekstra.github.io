@@ -1,117 +1,101 @@
-.location-article {
+.location-container {
     background-color: $location-background-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 1rem;
+    padding: 1em;
     z-index: 1;
     position: relative; // relative position to activate z-index
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    @include flex($align: center, $justify: center);
+    gap: 1em;
 
     @include widescreen {
         box-shadow: none;
     }
 
     &__content {
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 500;
+        color: $secondary-text-color;
     }
 }
 
-.explore-section {
-    padding: 2.5rem 1.25rem 3.5rem 1.25rem;
-    padding-top: 2.5rem;
-    padding-bottom: 3.5rem;
-    display: flex;
-    flex-direction: column;
+.main-section {
+    @include flex($direction: column);
+    padding: 2.5em 1.25em 3.5em 1.25em;
     text-align: center;
+    background-color: $main-background-color;
 
     @include widescreen {
-        padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+        padding-top: 1.875em;
+        padding-bottom: 1.875em;
     }
 
     &__title {
+        // for a better render of the title
         @media (max-width: 449px) {
             max-width: 250px;
             margin: auto;
         }
 
         @include widescreen {
-            font-size: 2.5rem;
+            font-size: 2.5em;
         }
     }
 
     &__subtitle {
-        font-size: 1.125rem;
-        font-weight: 300;
-        margin-top: 1rem;
-        margin-bottom: 1.75rem;
+        margin-top: 1em;
+        margin-bottom: 1.75em;
+        color: $secondary-text-color;
 
         @include widescreen {
-            margin-top: 1.125rem;
-            margin-bottom: 1.125rem;
+            margin: 1.125em 0;
         }
     }
 }
 
 .functioning-section {
     background-color: $secondary-background-color;
-    padding: 3rem 1.25rem 4.25rem 1.25rem;
+    padding: 3em 1.25em 4.25em 1.25em;
 
     @include widescreen {
-        padding: 3.125rem 1.25rem 3.125rem 1.25rem;
-    }
-
-    &__title {
-        max-width: 67.5rem;
+        padding: 3.125em 1.25em;
+        max-width: 67.5em;
         margin: auto;
     }
 }
 
-.functioning-contenair {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.625rem;
+.functioning-container {
+    @include flex($direction: column);
+    gap: 1.5em;
+    margin-top: 1.625em;
 
     @include widescreen {
-        max-width: 67.5rem;
-        margin-right: auto;
-        margin-left: auto;
         flex-direction: row;
     }
 }
 
 .restaurants-section {
-    padding: 3.375rem 1rem 4.125rem 1rem;
+    padding: 3.375em 1.125em 4.125em 1.125em;
     background-color: $main-background-color;
-
+    
     @include widescreen {
-        padding: 1.875rem 1rem 1.875rem 1rem;
-    }
+        padding: 1.875em 1.25em;
 
-    &__title {
-        max-width: 67.5rem;
-        margin: auto;
+        &__wrapper {
+            max-width: 67.5em;
+            margin: auto;
+        }
     }
 }
 
-.restaurants-contenair {
-    display: flex;
-    flex-direction: column;
-    gap: 1.125rem;
-    margin-top: 1.25rem;
+.restaurants-container {
+    @include flex($direction: column);
+    gap: 1.125em;
+    margin-top: 1.25em;
 
     @include widescreen {
-        max-width: 67.5rem;
-        margin: 1.75rem auto 0 auto;
+        margin-top: 1.75em;
         display: grid;
         grid-template: 1fr 1fr / 1fr 1fr;
-        gap: 50px;
-    }
-
-    @media (min-width: 1120px) {
-        gap: 50px 100px;
+        gap: min(3.47vw, 3.125em) min(6.94vw, 6.25em);
     }
 }

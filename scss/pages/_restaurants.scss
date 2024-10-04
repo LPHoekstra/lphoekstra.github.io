@@ -1,24 +1,30 @@
-main {
-    background-color: $secondary-background-color;
-}
-
-.main-img {
-    height: 17.125rem;
-    width: 100%;
-    object-fit: cover;
+.presentation-img-container {
+    height: 17.125em;
+    overflow: hidden;
 
     @include widescreen {
-        height: 23.875rem;
+        height: 23.875em;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+        @include widescreen {
+            transform: translateY(-8em);
+            height: max(26.6vw, 32em);
+        }
     }
 }
 
 .menu-section {
-    padding: 2rem 0.875rem 2.5rem 0.875rem;
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
+    padding: 2em 0.875em 2.5em 0.875em;
+    border-top-left-radius: 2.5em;
+    border-top-right-radius: 2.5em;
     background-color: $main-background-color;
     position: relative;
-    margin-top: -3.375rem;
+    margin-top: -3.375em;
 
     @include widescreen {
         max-width: 1055px;
@@ -28,65 +34,54 @@ main {
 }
 
 .menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 1.75rem;
-    padding-left: 0.25rem;
-    margin-bottom: 2.25rem;
+    @include flex($align: center, $justify: space-between);
+    padding-right: 1.75em;
+    padding-left: 0.25em;
+    margin-bottom: 2em;
 
     &__title {
         font-family: $secondary-font-family;
-        font-size: 1.75rem;
+        font-size: 1.75em;
         font-weight: 400;
         text-wrap: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        @extend %text-overflow-ellipsis;
     }
 
     @include widescreen {
         justify-content: center;
-        gap: 1.563rem;
+        gap: 1.563em;
     }
 }
 
 .course-article {
     @include widescreen {
-        max-width: 39.625rem;
+        max-width: 39.625em;
         margin-left: auto;
         margin-right: auto;
     }
-}
 
-.course-title {
-    font-weight: 300;
-    font-size: 1rem;
-    position: relative;
-    padding-bottom: 0.75rem;
-    text-transform: uppercase;
+    &__title {
+        position: relative;
+        font-weight: 300;
+        font-size: 1em;
+        padding-bottom: 0.563em;
+        text-transform: uppercase;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 2.5rem;
-        height: 3px;
-        background-color: $tertiary-color;
+        &::after {
+            @include pseudo-elements-absolute-full-size($width: 2.5em, $height: 3px, $top: calc(100% - 3px));
+            background-color: $tertiary-color;
+        }
     }
 }
 
-.menu-cards-contenair {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 0.75rem;
-    margin-bottom: 2.5rem;
+.menu-cards-container {
+    @include flex($direction: column);
+    gap: 0.75em;
+    margin-top: 0.75em;
+    margin-bottom: 2.5em;
 }
 
 .restaurants-btn {
-    padding: 1rem 3rem;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    text-align: center;
+    max-width: 186px;
 }

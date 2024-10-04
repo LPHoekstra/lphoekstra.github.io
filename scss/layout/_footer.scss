@@ -1,53 +1,49 @@
-$default-font-weight: 400;
-$parthnership-font-weight: 500;
+%under-text-animation {
+    position: relative;
 
-@mixin content-footer($font-weight: $default-font-weight) {
-    display: flex;
-    flex-direction: column;
-    gap: 0.438rem;
-
-    @include widescreen {
-        flex-direction: row;
-        gap: 1rem;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $footer-text-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 200ms ease-out;
+        will-change: transform;
     }
 
-    &__link {
-        position: relative;
-        font-size: 1rem;
-        color: $footer-text-color;
-        font-weight: $font-weight;
-        margin-right: auto;
-
+    &:hover {
         &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0.125rem;
-            background-color: $footer-text-color;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 200ms ease-out;
-        }
-
-        &:hover {
-            &::after {
-                transform: scaleX(1);
-            }
+            transform: scaleX(1);
         }
     }
 }
 
+%content-footer {
+    @include flex($direction: column);
+    gap: 0.438em;
+
+    @include widescreen {
+        flex-direction: row;
+        gap: 1em;
+    }
+}
+
 .footer {
-    padding: 1.375rem 1.563rem;
+    padding: 1.375em 1.563em;
     background-color: $footer-background-color;
+
+    a, &__title {
+        color: $footer-text-color;
+    }
 
     &__title {
         font-family: $secondary-font-family;
-        font-size: 1.125rem;
-        font-weight: $default-font-weight;
-        color: $footer-text-color;
+        font-size: 1.125em;
+        font-weight: 400;
 
         @include widescreen {
             order: 2;
@@ -55,29 +51,35 @@ $parthnership-font-weight: 500;
     }
 
     @include widescreen {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 4rem;
-        padding: 3.5rem 3.75rem 1.875rem 2rem;
+        @include flex($justify: flex-end, $align: center);
+        gap: 4em;
+        padding: 3.5em 3.75em 1.875em 2em;
     }
 }
 
-.footer-content-contenair {
-    @include content-footer;
-    margin-top: 1rem;
+.footer-content-container {
+    @extend %content-footer;
+    margin-top: 1em;
 
     @include widescreen {
         margin: 0;
-        gap: 2.625rem;
+        gap: 2.625em;
     }
 }
 
-.partnership-contenair {
-    @include content-footer($parthnership-font-weight);
+.partnership-container {
+    @extend %content-footer;
+    font-weight: 500;
+
+    &__link {
+        @extend %under-text-animation;
+    }
 }
 
-.contact-contenair {
-    @include content-footer;
+.contact-container {
+    @extend %content-footer;
+
+    &__link {
+        @extend %under-text-animation;
+    }
 }

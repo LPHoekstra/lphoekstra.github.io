@@ -1,32 +1,31 @@
 .functioning-cards {
-    border-radius: 1.25rem;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    display: flex;
+    @include flex($align: center);
     position: relative;
-    flex-direction: row;
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
     background-color: $main-background-color;
-    margin-left: 0.75rem;
-    gap: 1.375rem;
-    align-items: center;
-
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 1.25em;
+    padding: 1.75em 0;
+    margin-left: 0.75em;
+    gap: 1.375em;
+    
     @include widescreen {
+        gap: min(1.52vw, 1.375em);
         flex: 1;
     }
-
+    
     &__title {
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 500;
     }
 
     &__number {
         position: relative;
         color: $btn-text-color;
-        font-size: 0.875rem;
-        padding: 0.25rem 0.5rem;
+        font-size: 0.875em;
+        font-weight: 500;
+        padding: 0.25em 0.5em;
         background-color: $main-color;
         border-radius: 50%;
-        margin-left: -0.75rem;
+        margin-left: -0.75em;
     }
 }

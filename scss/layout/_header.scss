@@ -1,20 +1,20 @@
 .header {
     text-align: center;
-    padding-top: 0.875rem;
-    padding-bottom: 0.313rem;
+    padding-top: 0.875em;
+    padding-bottom: 0.313em;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     z-index: 2;
     position: relative; // relative position to activate z-index
 
     @include widescreen {
         box-shadow: none;
-        padding-top: 1.438rem;
-        padding-bottom: 1.563rem;
+        padding-top: 1.438em;
+        padding-bottom: 1.563em;
     }
 
     &__arrow {
         position: absolute;
-        left: 23px;
+        left: 1.438em;
         top: 50%;
         transform: translateY(-50%);
     }
